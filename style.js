@@ -28,7 +28,9 @@ function upadateSpanText(id, depositNumber) {
 const withdrawBtn = document.getElementById("addWithdraw");
 withdrawBtn.addEventListener("click", function () {
   withdrawNumber=getInputNumber("withdrawAmount");
-  console.log(withdrawNumber)
+  upadateSpanText("currentWithdraw",withdrawNumber);
+  upadateSpanText("currentBalance",-1*withdrawNumber);
+  document.getElementById("withdrawAmount").value="";
 
 
 })
